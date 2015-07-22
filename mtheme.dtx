@@ -63,7 +63,7 @@
   xrightmargin=0em,
   aboveskip=1em,
   belowskip=1em,
-  morekeywords={usetheme,institute,maketitle,@metropolis@titleformat,plain,setbeamercolor,metropolisset},
+  morekeywords={usetheme,institute,maketitle,@metropolis@titleformat,plain,setbeamercolor,metroset},
 }
 \lstMakeShortInline|
 
@@ -205,14 +205,14 @@ either provide a comma separated list of options when invoking
 \begin{lstlisting}
 \usetheme[<key=value list>]{m}
 \end{lstlisting}
-Or you can set them at any time with the |\metropolisset| macro.
+Or you can set them at any time with the |\metroset| macro.
 \begin{lstlisting}
-\metropolisset[<key=value list>]
+\metroset[<key=value list>]
 \end{lstlisting}
 To set an option on a specific sub-package only you have to add the
 corresponding prefix (inner, outer, color), e.g.
 \begin{lstlisting}
-\metropolisset[inner/block=fill]
+\metroset[inner/block=fill]
 \end{lstlisting}
 The list of options is structured as shown in the following example.
 
@@ -266,12 +266,6 @@ option on every sub-package accordingly.
 
 \DescribeOption{frametitleformat}{regular, lowercase, uppercase}{lowercase}{
   Control the case style of the frame title.
-}
-
-\DescribeOption{frametitleoffset\\noframetitleoffset}{<dimension>}{2em}{
-  The frametitle offset is an additional vertical space after the frame title
-  to center the content vertically on the frame. To remove this space entirely
-  the short option |noframetitleoffset| is defined.
 }
 
 \subsubsection{Color theme}
