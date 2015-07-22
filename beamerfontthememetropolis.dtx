@@ -33,17 +33,36 @@
 %    \begin{macrocode}
 \RequirePackage[no-math]{fontspec}
 \defaultfontfeatures{Mapping=tex-text}
-\setsansfont[BoldItalicFont={Fira Sans Italic},%
-             ItalicFont={Fira Sans Light Italic},%
-             BoldFont={Fira Sans}]{Fira Sans Light}
-\setmonofont{Fira Mono}
-\newfontfamily\ExtraLight{Fira Sans ExtraLight}
-\newfontfamily\Light{Fira Sans Light}
-\newfontfamily\Book{Fira Sans}
-\newfontfamily\Medium{Fira Sans Medium}
+
+
+\setsansfont[Path=fonts/,
+             BoldItalicFont={FiraSans-Italic.otf},
+             ItalicFont={FiraSans-LightItalic.otf},
+             BoldFont={FiraSans-Regular.otf}]{FiraSans-Light.otf}
+\setmonofont[Path=fonts/]{FiraMono-Regular.otf}
+\newfontfamily\ExtraLight[Path=fonts/,
+                          ItalicFont=FiraSans-ExtraLightItalic.otf]{FiraSans-ExtraLight.otf}
+\newfontfamily\Light[Path=fonts/,
+                     ItalicFont=FiraSans-LightItalic.otf]{FiraSans-Light.otf}
+\newfontfamily\Book[Path=fonts/,
+                    ItalicFont=FiraSans-Italic.otf,
+                    BoldFont=FiraSans-Bold.otf,
+                    BoldItalicFont=FiraSans-BoldItalic.otf]{FiraSans-Regular.otf}
+\newfontfamily\Medium[Path=fonts/,ItalicFont=FiraSans-MediumItalic.otf]{FiraSans-Medium.otf}
+
+
+% \setsansfont[BoldItalicFont={Fira Sans Italic},%
+%              ItalicFont={Fira Sans Light Italic},%
+%              BoldFont={Fira Sans}]{Fira Sans Light}
+% \setmonofont{Fira Mono}
+% \newfontfamily\ExtraLight{Fira Sans ExtraLight}
+% \newfontfamily\Light{Fira Sans Light}
+% \newfontfamily\Book{Fira Sans}
+% \newfontfamily\Medium{Fira Sans Medium}
+
 \AtBeginEnvironment{tabular}{%
-    \setsansfont[BoldFont={Fira Sans},%
-                 Numbers={Monospaced}]{Fira Sans Light}%
+    \setsansfont[Path=fonts/,BoldFont={FiraSans-Regular.otf},%
+                 Numbers={Monospaced}]{FiraSans-Light.otf}%
     }
 %    \end{macrocode}
 %
